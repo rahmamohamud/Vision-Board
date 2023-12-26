@@ -4,17 +4,17 @@
    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Visual Board Creator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/browser-icon.png">
+    <link rel="stylesheet" href="home-page.css">
 </head>
 <body>
     
             
 <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="vista-logo.png" class="logo"></a>
+      <a class="navbar-brand" href="#"><img src="images/vista-logo.png" class="logo"></a>
       <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,17 +22,15 @@
       <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-item" >
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            <a class="nav-link" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about-page">About</a>
           </li>
-        
          
         </ul>
         <form class="d-flex" role="search">
-            <button type="button" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2">Sign Up</button>
-
+            <a href="login.html"><button type="button" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2">Login</button></a>
         </form>
       </div>
     </div>
@@ -44,12 +42,17 @@
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
 
-            <img src="goal-image-front-page.png" class="d-block mx-lg-auto img-fluid" alt="goal-image"  loading="lazy" id="goal-image">
+            <img src="images/goal-image-front-page.png" class="d-block mx-lg-auto img-fluid" alt="goal-image"  loading="lazy" id="goal-image">
 
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
-            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" ><span id="name">Visual</span> <span id="name">Board</span> <span id="name">Creator</span> </h1>
+            <p class="lead">Embark on a journey of intention and achievement with our Visual Board Creator. Our app is your canvas for manifesting success in 2024. From personal milestones to professional triumphs, bring your goals to life and watch your aspirations take shape.</p>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="#about-page"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More</button></a>
+              
+              </div>
            
           </div>
         </div>
@@ -62,17 +65,17 @@
           <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             
             <div class="col-lg-6">
-                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
-                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><span id="name">About</span></h1>
+                <p class="lead" id="about-content">Discover the magic of manifestation! In the pursuit of your 2024 goals, we've simplified the art of vision boarding. <br><br> Our app empowers you to effortlessly craft your vision board by answering simple, thought-provoking questions. No need for an extensive library or collaboration – we believe in the power of simplicity. <br><br> As you respond to prompts, this app intuitively compiles a visual representation of your aspirations. Start visualizing your goals today with a tool designed to make your dreams tangible.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Create your vision board!</button>
+                  <a href="sign-up.html"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Create your vision board!</button></a>
                 
                 </div>
               </div>
             
             <div class="col-10 col-sm-8 col-lg-6">
   
-              <img src="about-page-image.png" class="d-block mx-lg-auto img-fluid" alt="goal-image"  loading="lazy" id="goal-image">
+              <img src="images\about-page-image.png" class="d-block mx-lg-auto img-fluid" alt="goal-image"  loading="lazy" id="goal-image">
   
             </div>
            
@@ -83,14 +86,7 @@
 
 
 
-      <script>(() => {
-        'use strict'
-      
-        document.querySelector('#navbarSideCollapse').addEventListener('click', () => {
-          document.querySelector('.offcanvas-collapse').classList.toggle('open')
-        })
-      })()
-      </script>
+      <script src="index.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --primary-color:#f3fcff;
+    --secondary-color: #e5f2fd;
+    --dark: #015c92;
+    --midblue: #2d8285;
+    --semiblue: #018abe;
+    --lightblue: #97cadb;
+    --brightblue: #0dcaf0;
+    --grey: #3b3b3b;
+    --logo-color-one: #6D82CE;
+    --logo-color-two: #2A54A7;
+    --logo-color-three: #9933EA;
+    --logo-color-four: #9EAEFF;
+
+}
+
+body{
+    background-color:#99a5ff;
+}
+
+.btn{
+    background-color: var(--logo-color-one);
+}
+.btn:hover{
+    background-color: var(--dark);
+}
+
+
+.form-floating{
+    margin: 30px 0px 20px 0px;
+}
+
+#signupbtn{
+    margin-top: -20px;
+}
+
+.msg{
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.msg a{
+    text-decoration: none;
+    color: var(--logo-color-three);
+    font-weight: bold;
+
+}
+
+
+.container{
+    zoom: 70%;
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: white;
+    box-shadow: 2px 2px 15px #8f8f8f;
+}
