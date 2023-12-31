@@ -11,7 +11,7 @@
 </head>
 <body>
        
-    <section class="sign-up-page" id="sign-up-page"> 
+    <section class="login-page" id="login-page"> 
         <div class="container" id="landing-page" ro>
               <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 
@@ -23,15 +23,15 @@
                       
                           
                           <div class="form-floating">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="emailInput">
                             <label for="floatingInput">Email address</label>
-                            <p class="warning-email" style="color: red;"></p>
+                            <p class="login-warning-email" style="color: red;"></p>
                           </div>
 
                           <div class="form-floating">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="passwordInput">
                             <label for="floatingPassword">Password</label>
-                            <p class="warning-password" style="color: red;"></p>
+                            <p class="login-warning-password" style="color: red;"></p>
                           </div>
                       
                          
@@ -39,7 +39,7 @@
                           <div class="form-check text-start my-3">
                           
                           </div>
-                          <button class="btn btn-primary w-100 py-2" type="submit" id="signupbtn">Login</button>
+                          <button class="btn btn-primary w-100 py-2" type="submit" id="signupbtn" name="login-button">Login</button>
                           
                           <p class="msg">Not registered? Click <a href="sign-up.html">Here</a> to sign up</p>
 

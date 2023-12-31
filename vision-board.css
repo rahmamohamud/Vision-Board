@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins&display=swap');
+
+
+
+.container{
+    
+    border: 2px solid black;
+    height: 100vh;
+    width: 895px;
+    background-image: url('images/vision-board-layout.png'); /* Replace with the path to your image */
+      background-size: cover; /* Cover the entire container */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      position: relative;
+}
+
+td{
+    z-index: 2;
+    font-family: 'Caveat', cursive; 
+    font-size: 20px;
+    text-align: center;
+    min-width: 180px;
+    max-width: 180px;
+    max-height: 80px;
+    min-height: 80px;
+    overflow: hidden;
+  word-wrap: break-word;
+  transform: translate(100%, -120%);
+}
+
+
+
+.hobby{
+    position: absolute;
+      top: 27%;
+      left: 19.5%;
+      
+     
+}
+
+.smile{
+    position: absolute;
+      top: 62%;
+      left: 54%;
+} 
+
+.change{
+    position: absolute;
+      top: 92%;
+      left: 30%;
+      transform: translate(100%, -120%);
+      min-width: 180px;
+      max-width: 180px;
+      max-height: 70px;
+      min-height: 70px;
+}
+
+.place{
+    position: absolute;
+      top: 87%;
+      left: -10%;
+      transform: translate(100%, -120%);
+}
+
+.job{
+    position: absolute;
+      top: 50%;
+      left: -13%;
+}
+
+.download-field{
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+}
+
+
+
+button{
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjust the gap as needed for spacing between the text and icon */
+    padding: 10px;
+    background-color: #abd4f0; 
+    border: 0px;   
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #8ab3ce;
+}

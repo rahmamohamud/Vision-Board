@@ -123,6 +123,8 @@ nav{
 
 }
 
+/*GENERAL*/
+
 .logo{
     height: 30px;
 }
@@ -131,3 +133,7 @@ main{
     zoom: 90%;
 }
 
+.form-floating{
+  margin: 30px 0px 20px 0px;
+
+}
