@@ -20,18 +20,24 @@
 
 }
 
-
 body{
-background-color:#99a5ff;
+    background-color:#99a5ff;
 }
+
+.btn{
+    background-color: var(--logo-color-one);
+}
+.btn:hover{
+    background-color: var(--dark);
+}
+
 
 .form-floating{
     margin: 30px 0px 20px 0px;
-
 }
 
 #signupbtn{
-    margin-top: -20px;
+    margin-top: 20px;
 }
 
 .msg{
@@ -47,15 +53,9 @@ background-color:#99a5ff;
 
 }
 
-.btn{
-    background-color: var(--logo-color-one);
-}
-.btn:hover{
-    background-color: var(--dark);
-}
 
 .container{
-    zoom: 90%;
+    zoom: 70%;
     border: 1px solid rgb(255, 255, 255);
     margin-top: 30px;
     margin-bottom: 30px;

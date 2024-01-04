@@ -16,6 +16,7 @@
         <div class="container py-4">
           
           <div class="p-5 mb-4 bg-body-tertiary rounded-3" >
+            
             <div class="container-fluid py-5">
 
                 <img src="images/vista-logo.png" style="max-height: 40px; padding-bottom: 10px;">
@@ -24,7 +25,7 @@
       
               <p class="col-md-8 fs-4"> By clicking the delete button below, you will delete your account with the vision board as well. Are you sure you want to delete?</p>
       
-              <!--Create Button, Leads to Questions page-->
+              <!--Deletes account-->
               <button class="btn btn-primary btn-lg" type="button" name="delete">Yes, Delete Account</button>
             </div>
           </div>

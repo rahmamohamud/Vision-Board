@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="vision-board.css">
+    <link rel="stylesheet" href="CSS/vision-board.css">
 </head>
 <body>
 
@@ -13,39 +13,39 @@
     <button onclick="downloadImage()"> <span>Download Vision Board</span>  <img src="images/download-icon.png"></button>
     <br>
     <button name="dashboard-return"> Return to Dashboard</button>
-
 </div>    
 
+<!--Text on the vision board-->
 
     <div class="container">
     
     <table>
     <tr>
-         <td class="hobby">Hello Helo Hello Heloo</td>
+         <td class="hobby" id="hobby">Text to be replaced</td>
     </tr>
     </table>
 
     <table>
         <tr>
-            <td class="smile">Smile</td>
+            <td class="smile" id="smile">Text to be replaced</td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td class="change">Hello Helo Hello Heloo</td>
+            <td class="change" id="change">Text to be replaced</td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td class="place">Hello Helo Hello Heloo</td>
+            <td class="place" id="place">Text to be replaced</td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td class="job">Hello Helo Hello Heloo</td>
+            <td class="job" id="job">Text to be replaced</td>
         </tr>
     </table>
     </div>
@@ -53,6 +53,7 @@
 
 
 <script>
+//Code to download the vision board
 
   function downloadImage() {
   // Get the container element

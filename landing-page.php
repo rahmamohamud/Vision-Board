@@ -13,11 +13,11 @@
     <link rel="icon" type="image/x-icon" href="images/browser-icon.png">
 
     <!--Link to stylesheet-->
-    <link rel="stylesheet" href="home-page.css">
+    <link rel="stylesheet" href="CSS/home-page.css">
 </head>
 <body>
     
-            
+<!--Navigation-->            
 <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="images/vista-logo.png" class="logo"></a>
@@ -36,12 +36,13 @@
          
         </ul>
         <form class="d-flex" role="search">
-            <a href="login.html"><button type="button" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2">Login</button></a>
+            <a href="login-form.php"><button type="button" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2">Login</button></a>
         </form>
       </div>
     </div>
   </nav>
 
+  <!--Home Page-->
 
   <section class="landing-page" id="home"> 
   <div class="container col-xxl-8 px-4 py-5" id="landing-page">
@@ -55,6 +56,7 @@
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" ><span id="name">Visual</span> <span id="name">Board</span> <span id="name">Creator</span> </h1>
             <p class="lead">Embark on a journey of intention and achievement with our Visual Board Creator. Our app is your canvas for manifesting success in 2024. From personal milestones to professional triumphs, bring your goals to life and watch your aspirations take shape.</p>
 
+            <!--Leads to about page-->
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                 <a href="#about-page"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More</button></a>
               
@@ -65,6 +67,7 @@
       </div>
 </section>
 
+<!--About Page-->
 
 <section class="about-page" id="about-page"> 
     <div class="container col-xxl-8 px-4 py-5" id="landing-page">
@@ -74,7 +77,9 @@
                 <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><span id="name">About</span></h1>
                 <p class="lead" id="about-content">Discover the magic of manifestation! In the pursuit of your 2024 goals, we've simplified the art of vision boarding. <br><br> Our app empowers you to effortlessly craft your vision board by answering simple, thought-provoking questions. No need for an extensive library or collaboration – we believe in the power of simplicity. <br><br> As you respond to prompts, this app intuitively compiles a visual representation of your aspirations. Start visualizing your goals today with a tool designed to make your dreams tangible.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <a href="sign-up.html"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Create your vision board!</button></a>
+
+                  <!--Leads to sign up form-->
+                  <a href="sign-up-form.php"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Create your vision board!</button></a>
                 
                 </div>
               </div>
@@ -91,8 +96,8 @@
 
 
 
-
-      <script src="index.js"></script>
+  <!--Script for navbar-->
+    <script src="JavaScript-files/index.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   

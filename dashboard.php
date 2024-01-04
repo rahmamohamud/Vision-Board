@@ -17,7 +17,7 @@
     <link rel="icon" type="image/x-icon" href="images/browser-icon.png">
     
     <!--Link to CSS file for styling-->
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
 
           
     <!--Navigation-->
@@ -34,12 +34,14 @@
           <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-item" >
              
+              <!--Link to redirect to Update page-->
               <li class="nav-item">
-                <a class="nav-link" href="update.html">Update Info</a>
+                <a class="nav-link" href="update.php">Update Info</a>
               </li>
              
+              <!--Link to redirect to Delete page-->
               <li class="nav-item">
-                <a class="nav-link" href="delete.html">Delete Account</a>
+                <a class="nav-link" href="delete.php">Delete Account</a>
               </li>
             </ul>
 
@@ -97,6 +99,6 @@
   </main>
 
 <!--Script for navbar-->
-  <script src="index.js"></script>
+  <script src="JavaScript-files/index.js"></script>
     </body>
 </html>

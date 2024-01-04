@@ -9,10 +9,14 @@
     <meta name="generator" content="Hugo 0.118.2">
     <title>Vision Board</title>
 
+    <!--Bootstrap link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--Link for browser icon-->
     <link rel="icon" type="image/x-icon" href="images/browser-icon.png">
     
-    <link rel="stylesheet" href="dashboard.css">
+    <!--Link to stylesheet-->
+    <link rel="stylesheet" href="CSS/questions.css">
 
            
     <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
@@ -25,6 +29,8 @@
           <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-item" ></ul>
             <form class="d-flex" role="search">
+
+                <!--Logout button-->
                 <button type="button" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2" name="log-out">Log Out</button>
             </form>
           </div>
@@ -33,12 +39,19 @@
     
 
 <body>
-<main class="questions">
+<main class="update">
   <div class="container py-4">
     
+    <!--Update field-->
     <div class="p-5 mb-4 bg-body-tertiary rounded-3" >
       <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Create Board</h1>
+        <h1 class="display-5 fw-bold">Update Board</h1>
+
+        <!--Questions-->
+
+        
+        <form action="<?php echo htmlspecialchars(($_SERVER['PHP_SELF']));?>"
+            method="POST" enctype="multipart/form-data">
 
         <div class="form-floating">
             <input type="text" class="form-control" id="floatingInput" placeholder="What is your dream career?" name="career">
@@ -65,7 +78,8 @@
       <label for="floatingInput">What is one thing you want to change in 2024?</label>
   </div>
 
-        <button class="btn btn-primary btn-lg" type="button" name="generate-board" >Generate Board</button>
+        <button class="btn btn-primary btn-lg" type="button" name="update-board" >Update Board</button>
+        </form>
       </div>
     </div>
     </div>
@@ -74,6 +88,7 @@
 
 
 
-  <script src="index.js"></script>
+<script src="JavaScript-files/index.js"></script>
+
     </body>
 </html>
