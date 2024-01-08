@@ -18,11 +18,7 @@
     --logo-color-three: #9933EA;
     --logo-color-four: #9EAEFF;
 
-}
 
-body{
-    background-color:#99a5ff;
-}
 
 .btn{
     background-color: var(--logo-color-one);

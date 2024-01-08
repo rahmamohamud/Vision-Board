@@ -1,104 +1,31 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<?php
+session_start();
+include 'database.php';
+require 'HTML/dashboard-site.html';
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.118.2">
+// Check if 'Email' key is set in the $_SESSION array
+if (isset($_SESSION['Email'])) {
+    $email = $_SESSION['Email'];
 
-    <title>Vision Board</title>
-
-    <!--Bootstrap connection-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!--Icon in browser tab-->
-    <link rel="icon" type="image/x-icon" href="images/browser-icon.png">
+    // Retrieve the name and surname associated with the email from the database
+    $stmt = $conn->prepare("SELECT Name, Surname FROM users WHERE Email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->bind_result($userName, $userSurname);
+    $stmt->fetch();
+    $stmt->close();
     
-    <!--Link to CSS file for styling-->
-    <link rel="stylesheet" href="CSS/dashboard.css">
+    echo '<script>
+    var elements = document.getElementsByClassName("user");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].innerHTML = "'.$userName.' '.$userSurname.'! ";
+    }
+</script>';
 
-          
-    <!--Navigation-->
-    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+} else {
+    echo "Session not set!";
+}
 
-        <div class="container-fluid">
 
-          <a class="navbar-brand" href="#"><img src="images/vista-logo.png" class="logo"></a>
 
-          <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-item" >
-             
-              <!--Link to redirect to Update page-->
-              <li class="nav-item">
-                <a class="nav-link" href="update.php">Update Info</a>
-              </li>
-             
-              <!--Link to redirect to Delete page-->
-              <li class="nav-item">
-                <a class="nav-link" href="delete.php">Delete Account</a>
-              </li>
-            </ul>
-
-            <!--Log Out Button-->
-            <form class="d-flex" role="button">
-                <a href=""><button type="button" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2" name="log-out">Log Out</button></a>
-            </form>
-          </div>
-        </div>
-      </nav>
-    
-
-<body>
-
-  <!--This main class shows if the user is new or returning and has not created a vision board-->
-<main class="newUser">
-  <div class="container py-4">
-    
-    <div class="p-5 mb-4 bg-body-tertiary rounded-3" >
-      <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Welcome <span id="username">User!</span></h1>
-
-        <p class="col-md-8 fs-4">You have no vision board. Click the 'Create' Button below to and answer a few questions to create your board succesfully!</p>
-
-        <!--Create Button, Leads to Questions page-->
-        <button class="btn btn-primary btn-lg" type="button" name="create-board">Create</button>
-      </div>
-    </div>
-    </div>
-  </div>
-</main>
-
-<!--This main class shows if the user is returning and has already created a vision board-->
-<main class="returningUser">
-    <div class="container py-4">
-      
-      <div class="p-5 mb-4 bg-body-tertiary rounded-3" id="block" >
-        <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">Welcome Back <span id="username" >User!</span></h1>
-  
-          <p class="col-md-8 fs-4">Your vision board is still intact! <br><br>
-
-        <button class="btn btn-primary btn-lg" type="button" name="view-vision-board">View Vision Board</button>
-
-        <br><br>    
-
-          Want to make a few changes to your vision board? Click the Update Button to do so.</p> 
-          
-          <!--Leads to Update Page-->
-          <button class="btn btn-primary btn-lg" type="button" name="update-board">Update</button>
-        </div>
-      </div>
-      </div>
-    </div>
-  </main>
-
-<!--Script for navbar-->
-  <script src="JavaScript-files/index.js"></script>
-    </body>
-</html>
+?>
