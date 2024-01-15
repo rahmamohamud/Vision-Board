@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
 
@@ -35,30 +35,36 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-item" >
              
               <!--Link to redirect to Update page-->
-              <li class="nav-item">
-                <a class="nav-link" href="update.php">Update Info</a>
+              <li class="nav-item" id="updateLink">
+                <a class="nav-link" href="#"></a>
               </li>
              
               <!--Link to redirect to Delete page-->
               <li class="nav-item">
-                <a class="nav-link" href="delete.php">Delete Account</a>
+                <a class="nav-link" href="#"></a>
               </li>
             </ul>
+
+            
 
             <!--Log Out Button-->
             <form method="post" action="log-out.php">
                 <button type="submit" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2" name="log-out">Log Out</button>
             </form>
             
+
           </div>
         </div>
       </nav>
     
 
 <body>
+  <form action="dashboard.php" method="POST" enctype="multipart/form-data">
 
   <!--This main class shows if the user is new or returning and has not created a vision board-->
-<main class="newUser">
+<main class="newUser" id="newUser">
+
+
   <div class="container py-4">
     
     <div class="p-5 mb-4 bg-body-tertiary rounded-3" >
@@ -67,16 +73,20 @@
 
         <p class="col-md-8 fs-4">You have no vision board. Click the 'Create' Button below to and answer a few questions to create your board succesfully!</p>
 
+      
         <!--Create Button, Leads to Questions page-->
-        <button class="btn btn-primary btn-lg" type="button" name="create-board">Create</button>
+        <button class="btn btn-primary btn-lg" type="submit"  name="create-board">Create</button>
       </div>
     </div>
     </div>
   </div>
+  
 </main>
 
 <!--This main class shows if the user is returning and has already created a vision board-->
-<main class="returningUser">
+<main class="returningUser" id="returningUser">
+
+
     <div class="container py-4">
       
       <div class="p-5 mb-4 bg-body-tertiary rounded-3" id="block" >
@@ -92,14 +102,28 @@
           Want to make a few changes to your vision board? Click the Update Button to do so.</p> 
           
           <!--Leads to Update Page-->
-          <button class="btn btn-primary btn-lg" type="button" name="update-board">Update</button>
+          <button class="btn btn-primary btn-lg" type="submit" name="update-board">Update</button>
         </div>
       </div>
       </div>
     </div>
+
   </main>
+
+
+  <!--Footer-->
+
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="delete.php" class="nav-link px-2 text-body-secondary">Delete Account</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">&copy; 2023 Rahma Mohamud</p>
+    </footer>
+  </div>
 
 <!--Script for navbar-->
   <script src="JavaScript-files/index.js"></script>
+</form>
     </body>
 </html>

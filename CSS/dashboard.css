@@ -138,3 +138,12 @@ main{
   margin: 30px 0px 20px 0px;
 }
 
+@media  (max-width: 500px){
+  .container{
+      zoom:60%;
+    }
+}
+
+#footer{
+  zoom: 50%;
+}

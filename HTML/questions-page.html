@@ -29,23 +29,31 @@
       
           <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-item" ></ul>
-          
+            <form action="<?php echo htmlspecialchars(($_SERVER['PHP_SELF']));?>"
+              method="POST" enctype="multipart/form-data">
+            <!--Return to dashbaord button-->
+            <button type="submit" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2" name="dashboard">Return to Dashboard</button>
+
               <!--Log out button-->
-                <button type="button" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2" name="log-out">Log Out</button>
-          
+                <button type="submit" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2" name="log-out">Log Out</button>
+          </form>
           </div>
         </div>
       </nav>
     
 
 <body>
+
+
 <main class="questions">
+  
   <div class="container py-4">
     
     <!--Create board field-->
     <div class="p-5 mb-4 bg-body-tertiary rounded-3" >
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Create Board</h1>
+        <p>Hint: Try to keep answers as short as possible!</p>
 
         <form action="<?php echo htmlspecialchars(($_SERVER['PHP_SELF']));?>"
           method="POST" enctype="multipart/form-data">
@@ -77,7 +85,7 @@
   </div>
 
         <!--Generate board button-->
-        <button class="btn btn-primary btn-lg" type="button" name="generate-board" >Generate Board</button>
+        <button class="btn btn-primary btn-lg" type="submit" name="generate-board" >Generate Board</button>
         </form>
       </div>
     </div>

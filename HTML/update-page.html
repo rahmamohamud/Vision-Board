@@ -28,11 +28,14 @@
       
           <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-item" ></ul>
-            <form class="d-flex" role="search">
+            <form action="<?php echo htmlspecialchars(($_SERVER['PHP_SELF']));?>"
+              method="POST" enctype="multipart/form-data">
+            <!--Return to dashbaord button-->
+            <button type="submit" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2" name="dashboard">Return to Dashboard</button>
 
-                <!--Logout button-->
-                <button type="button" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2" name="log-out">Log Out</button>
-            </form>
+              <!--Log out button-->
+                <button type="submit" id="navbar-button" class="btn btn-primary btn-lg px-4 me-md-2" name="log-out">Log Out</button>
+          </form>
           </div>
         </div>
       </nav>
