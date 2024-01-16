@@ -34,18 +34,26 @@ if (isset($_SESSION['Email'])) {
 
         global $conn;
 
-    // Update user input in the database
-    $stmt = $conn->prepare("UPDATE users SET `Dream-Job` = ?, `Place` = ?, `Hobby` = ?, `Smile-Reason` = ?, `Thing-to-Change` = ? WHERE Email = ?");
-    $stmt->bind_param("ssssss", $dream, $place, $hobby, $smile, $change, $email);
+if(empty($dream) or empty($place) or empty($hobby) or empty($smile) or empty($change)){
+    echo '<script>
+        document.getElementById("warning-fill-details").innerHTML = "Please fill in empty fields*";
+        </script>';
+} else{
+  // Update user input in the database
+  $stmt = $conn->prepare("UPDATE users SET `Dream-Job` = ?, `Place` = ?, `Hobby` = ?, `Smile-Reason` = ?, `Thing-to-Change` = ? WHERE Email = ?");
+  $stmt->bind_param("ssssss", $dream, $place, $hobby, $smile, $change, $email);
 
-    // Check if the update was successful
-    if ($stmt->execute()) {
-        echo '<script>alert("Board generated successfully!");</script>';
-    } else {
-        echo '<script>alert("Error generating board. Please try again.");</script>';
-    }
+  // Check if the update was successful
+  if ($stmt->execute()) {
+      echo '<script>alert("Board generated successfully!");</script>';
+  } else {
+      echo '<script>alert("Error generating board. Please try again.");</script>';
+  }
 
-    $stmt->close();
-    }
+  $stmt->close();
+  }
+}
+
+  
 }
 ?>

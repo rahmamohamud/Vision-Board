@@ -69,12 +69,12 @@ if (isset($_SESSION['Email'])) {
 
 // Check if the "create-board" button was clicked
 if(isset($_POST['create-board'])){
-    echo '<script>window.location.href = "questions.php";</script>';
+    echo '<script>window.location.href = "Create-Board.php";</script>';
 }
 
 // Check if the "create-board" button was clicked
 if(isset($_POST['update-board'])){
-    echo '<script>window.location.href = "update.php";</script>';
+    echo '<script>window.location.href = "Update.php";</script>';
 }
 
 } else {

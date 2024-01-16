@@ -34,11 +34,16 @@ if ($hashed_password !== null) {
         // Additional code for successful login, such as session management or redirection
     } else {
         // Inside the "Invalid password!" block
-echo "Password verification failed. User Entered Password: " . $_POST['passwordInput'] . ", Hashed Password from Database: $hashed_password";
-
+        echo '<script>
+        document.getElementById("warning-fill-details").innerHTML = "Incorrect Email or Password. Login Failed*";
+        </script>';
+    } 
+    
     }
-} else {
-    echo "Email not found!";
+else {
+    echo '<script>
+        document.getElementById("warning-fill-details").innerHTML = "Incorrect Email or Password. Login Failed*";
+        </script>';
 }
 
 // Close the database connection
