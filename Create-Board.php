@@ -45,7 +45,8 @@ if(empty($dream) or empty($place) or empty($hobby) or empty($smile) or empty($ch
 
   // Check if the update was successful
   if ($stmt->execute()) {
-      echo '<script>alert("Board generated successfully!");</script>';
+    echo '<script>window.location.href = "Vision-Board.php";</script>';
+    //echo '<script>alert("Board generated successfully!");</script>';
   } else {
       echo '<script>alert("Error generating board. Please try again.");</script>';
   }

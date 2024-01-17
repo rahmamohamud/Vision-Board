@@ -3,18 +3,6 @@
 
 
 
-.container{
-    
-    border: 2px solid black;
-    height: 100vh;
-    width: 895px;
-    background-image: url('images/vision-board-layout.png'); /* Replace with the path to your image */
-      background-size: cover; /* Cover the entire container */
-      background-position: center; /* Center the image */
-      background-repeat: no-repeat; /* Do not repeat the image */
-      position: relative;
-}
-
 td{
     z-index: 2;
     font-family: 'Caveat', cursive; 

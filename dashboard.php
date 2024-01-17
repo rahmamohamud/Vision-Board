@@ -46,8 +46,6 @@ function newUser(){
 
 // Check if 'Email' key is set in the $_SESSION array
 if (isset($_SESSION['Email'])) {
-    
-    
     $email = $_SESSION['Email'];
 
     newUser();
@@ -74,7 +72,7 @@ if(isset($_POST['create-board'])){
 
 // Check if the "create-board" button was clicked
 if(isset($_POST['update-board'])){
-    echo '<script>window.location.href = "Update.php";</script>';
+    echo '<script>window.location.href = "Create-Board.php";</script>';
 }
 
 } else {
