@@ -17,7 +17,7 @@ if(isset($email)){
     $stmt->bind_result($dream, $place, $hobby, $smile, $change);
     $stmt->fetch();
     $stmt->close();
-
+  
         echo '<script>
         document.getElementById("hobby").innerHTML = "'. $hobby .'";
         </script>';
@@ -27,7 +27,7 @@ if(isset($email)){
         </script>';
 
         echo '<script>
-        document.getElementById("change).innerHTML = "'. $change .'";
+        document.getElementById("change").innerHTML = "'. $change .'";
         </script>';
 
         echo '<script>

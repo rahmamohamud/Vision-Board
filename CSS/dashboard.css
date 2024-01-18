@@ -41,6 +41,7 @@ body {
     border: 0px solid var(--brightblue);
     padding: 5px;
     font-size: 17px;
+    text-align: right;
 }
 
 #navbar-button:hover{
@@ -74,8 +75,6 @@ nav{
     color: var(--semiblue);
 }
 
-
-
 .nav-link:hover::after{
     width: 100%;
 }
@@ -83,46 +82,6 @@ nav{
 
 
 
-@media (max-width: 991.98px) {
-  .offcanvas-collapse {
-    position: fixed;
-    top: 56px; /* Height of navbar */
-    bottom: 0;
-    left: 100%;
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    overflow-y: auto;
-    visibility: hidden;
-    background-color:var(--secondary-color);
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
-  }
-  .offcanvas-collapse.open {
-    visibility: visible;
-    transform: translateX(-100%);
-  }
-  nav{
-        background-color: var(--secondary-color);
-  }
-
-#nav-item{
-    margin-left: 0px;
-    padding-top: 10px;
-}
-
-.nav-link:hover::after{
-    width: 0%;
-}
-
-.nav-link:hover{
-    color: #6c99aa;
-}
-  .nav-link{
-    padding-bottom: 20px;
-  }
-
-
-}
 
 /*GENERAL*/
 
@@ -142,8 +101,4 @@ main{
   .container{
       zoom:60%;
     }
-}
-
-#footer{
-  zoom: 50%;
 }

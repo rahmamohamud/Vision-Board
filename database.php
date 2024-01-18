@@ -12,7 +12,7 @@ try {
     throw new mysqli_sql_exception(mysqli_connect_error());
     }
     
-    echo 'Database connected';
+   // echo 'Database connected';
     
     } catch (mysqli_sql_exception $e) {
     echo 'Database is not connected: ' . $e->getMessage();

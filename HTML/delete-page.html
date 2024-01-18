@@ -12,6 +12,8 @@
     <link rel="icon" type="image/x-icon" href="images/browser-icon.png">
 </head>
 <body>
+  <form action="<?php echo htmlspecialchars(($_SERVER['PHP_SELF']));?>"
+    method="POST" enctype="multipart/form-data">
     <main class="delete">
         <div class="container py-4">
           
@@ -26,11 +28,14 @@
               <p class="col-md-8 fs-4"> By clicking the delete button below, you will delete your account with the vision board as well. Are you sure you want to delete?</p>
       
               <!--Deletes account-->
-              <button class="btn btn-primary btn-lg" type="button" name="delete">Yes, Delete Account</button>
+              <button class="btn btn-primary btn-lg" type="submit" name="no-delete" style="margin: 40px; margin-left: 0px;background-color: rgb(111, 111, 211); border: 1px solid rgb(111, 111, 211);">No, I do not want to delete</button>
+              
+              <button class="btn btn-primary btn-lg" type="submit" name="delete">Yes, Delete Account</button>
             </div>
           </div>
           </div>
         </div>
       </main>
+      </form>
 </body>
 </html>

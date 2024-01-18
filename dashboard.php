@@ -25,8 +25,6 @@ function newUser(){
     $stmt->fetch();
     $stmt->close();
 
-    var_dump($dream, $place, $hobby, $smile, $change);
-
     if (!isset($dream) || $dream === "" || 
         !isset($place) || $place === "" || 
         !isset($hobby) || $hobby === "" || 
@@ -72,7 +70,11 @@ if(isset($_POST['create-board'])){
 
 // Check if the "create-board" button was clicked
 if(isset($_POST['update-board'])){
-    echo '<script>window.location.href = "Create-Board.php";</script>';
+    echo '<script>window.location.href = "Update.php";</script>';
+}
+
+if(isset($_POST['view-vision-board'])){
+    echo '<script>window.location.href = "Vision-Board.php";</script>';
 }
 
 } else {

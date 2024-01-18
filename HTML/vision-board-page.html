@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vision Board</title>
+     <!--Link to browser icon-->
+     <link rel="icon" type="image/x-icon" href="images/browser-icon.png">
     <link rel="stylesheet" href="CSS/vision-board.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 <body>
 
-<form action="<?php echo htmlspecialchars(($_SERVER['PHP_SELF']));?>" method="POST" enctype="multipart/form-data">
+
+ <form action="<?php echo htmlspecialchars(($_SERVER['PHP_SELF']));?>" method="POST" enctype="multipart/form-data">
+
 <div class="download-field">
 <p>Click the button below to download<br>your Vision Board as an image</p>
-    <button onclick="downloadImage()"> <span>Download Vision Board</span>  <img src="images/download-icon.png"></button>
+    <button type="submit" name="download" onclick="downloadImage()"> <span>Download Vision Board</span>  <img src="images/download-icon.png"></button>
     <br>
+    
     <button name="dashboard-return" type="submit"> Return to Dashboard</button>
 </div>    
 
@@ -50,37 +56,9 @@
         </tr>
     </table>
     </div>
-</form>
 
+<script src="JavaScript-files/downloadBoard.js"></script>
+ </form> 
 
-<script>
-//Code to download the vision board
-
-  function downloadImage() {
-  // Get the container element
-  const container = document.querySelector('.container');
-
-  // Use html2canvas to convert the content to an image
-  html2canvas(container, { quality: 1.0 }).then(canvas => {
-    // Convert the canvas to a blob
-    canvas.toBlob(blob => {
-      // Create a download link
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'vision-board.png';
-
-      // Append the link to the body and trigger a click event
-      document.body.appendChild(a);
-      a.click();
-
-      // Remove the link from the body
-      document.body.removeChild(a);
-    }, 'image/png');
-  });
-}
-</script>
-
-<!-- Include html2canvas library -->
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </body>
 </html>
