@@ -123,12 +123,6 @@ nav{
 
 }
 
-@media  (max-width: 500px){
-    .container{
-        zoom:60%;
-      }
-}
-
 /*GENERAL*/
 
 .logo{

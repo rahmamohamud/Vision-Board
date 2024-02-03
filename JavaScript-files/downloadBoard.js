@@ -12,7 +12,7 @@ function downloadImage() {
         // Create a download link
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = 'downloaded_image.png';
+        a.download = 'your-vision-board.png';
   
         // Append the link to the body and trigger a click event
         document.body.appendChild(a);

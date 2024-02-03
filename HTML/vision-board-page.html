@@ -11,17 +11,20 @@
 </head>
 <body>
 
+    <div class="download-field">
+        <p>Click the button below to download<br>your Vision Board as an image</p>
+            <button type="submit" name="download" onclick="downloadImage()"> <span>Download Vision Board</span>  <img src="images/download-icon.png"></button>
+            <br>
+            
+            
+        </div> 
+
 
  <form action="<?php echo htmlspecialchars(($_SERVER['PHP_SELF']));?>" method="POST" enctype="multipart/form-data">
-
-<div class="download-field">
-<p>Click the button below to download<br>your Vision Board as an image</p>
-    <button type="submit" name="download" onclick="downloadImage()"> <span>Download Vision Board</span>  <img src="images/download-icon.png"></button>
-    <br>
-    
+   
+    <div class="download-field">
     <button name="dashboard-return" type="submit"> Return to Dashboard</button>
-</div>    
-
+    </div>
 <!--Text on the vision board-->
 
     <div class="container" style="border: 2px solid black; height: 100vh; width: 895px; background-image: url('images/vision-board-layout.png'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;"    >
