@@ -39,9 +39,9 @@ To run Vista locally or on your server, follow these installation steps:
         - Ensure that the folder name where you saved the application is named 'Vision-Board-App'
         - Start the PHP development server:
 
-            ```bash
-            php -S localhost:8000 -t path/to/vista
-            ```
+        ```
+        php -S localhost:8000 -t path/to/vista
+        ```
 
     Replace `path/to/vista` with the actual path to your Vista application.
 
@@ -56,3 +56,7 @@ Vista, while designed to offer an immersive experience, has certain limitations 
 ### Note:
 
 Vista is a personal project developed by me, a final-year tech student, to showcase my programming skills. It is not intended for commercial use or deployment in production environments. Your feedback on the application's functionality and code is highly valued for ongoing improvements.
+
+## Licences and Credits
+All image credits belong to [Freepik](freepik.com) and Icons to [Google Icons](https://fonts.google.com/icons).
+I designed and created the Vista logo and Vision Board myself. 

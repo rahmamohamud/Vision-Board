@@ -55,6 +55,5 @@ if(empty($dream) or empty($place) or empty($hobby) or empty($smile) or empty($ch
   }
 }
 
-  
 }
 ?>
