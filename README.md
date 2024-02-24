@@ -33,6 +33,9 @@ To run Vista locally or on your server, follow these installation steps:
 
 2. **Database Setup:**
         - Create a MySQL database for Vista in your MySQL admin. The name of the database should be *'vision-board'* and the table should be named *'users'*.
+        - SQL Statement for the table:
+        
+       ```CREATE TABLE `vision-board`.`users` (`ID` INT NOT NULL AUTO_INCREMENT , `Name` TEXT NOT NULL , `Surname` TEXT NOT NULL , `Email` VARCHAR(250) NOT NULL , `Password` VARCHAR(250) NOT NULL , `Dream-Job` TEXT NOT NULL , `Place` TEXT NOT NULL , `Hobby` TEXT NOT NULL , `Smile-Reason` TEXT NOT NULL , `Change` TEXT NOT NULL , PRIMARY KEY (`ID`)) ENGINE = InnoDB;```
 
 3. **Running the Application:**
         - Ensure PHP and MySQL are running.
