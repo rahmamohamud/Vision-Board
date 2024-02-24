@@ -37,15 +37,8 @@ To run Vista locally or on your server, follow these installation steps:
 3. **Running the Application:**
         - Ensure PHP and MySQL are running.
         - Ensure that the folder name where you saved the application is named 'Vision-Board-App'
-        - Start the PHP development server:
+        - Open your browser and navigate to `http://localhost/Vision-Board-App/Home-Page.php`.
 
-        ```
-        php -S localhost:8000 -t path/to/vista
-        ```
-
-    Replace `path/to/vista` with the actual path to your Vista application.
-
-    - Open your browser and navigate to `http://localhost/Vision-Board-App/Home-Page.php`.
 
 ## Limitations
 
